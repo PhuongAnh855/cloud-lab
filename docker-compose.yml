@@ -1,17 +1,18 @@
+version: '3.8'
+
 services:
   backend:
-    build:
-      context: ./server
-      dockerfile: Dockerfile
+    build: ./server
     ports:
       - "5000:5000"
     environment:
       - PORT=5000
-      - MONGODB_URI=mongodb+srv://user:password@cluster0.mongodb.net/cloudlab
+      - NODE_ENV=production
+      - MONGODB_URI=mongodb+srv://lephuonganh:Phuonganh123@cluster0.yed4ywy.mongodb.net/cloud_lab?appName=Cluster0
 
   frontend:
-    build:
-      context: ./client
-      dockerfile: Dockerfile
+    build: ./client
     ports:
-      - "3000:3000"
+      - "80:80"
+    depends_on:
+      - backend
