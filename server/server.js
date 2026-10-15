@@ -94,6 +94,15 @@ app.delete('/api/students/:id', async (req, res) => {
   }
 });
 
+// Route kiểm tra sức khỏe ứng dụng (Health Check)
+app.get('/health', (req, res) => {
+  res.status(200).json({
+    status: 'UP',
+    timestamp: new Date(),
+    uptime: process.uptime()
+  });
+});
+
 app.listen(PORT, () => {
   console.log(`Server is running on port ${PORT}`);
 });

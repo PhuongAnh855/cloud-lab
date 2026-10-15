@@ -8,7 +8,7 @@ services:
     environment:
       - PORT=5000
       - NODE_ENV=production
-      - MONGODB_URI=mongodb+srv://lephuonganh:Phuonganh123@cluster0.yed4ywy.mongodb.net/cloud_lab?appName=Cluster0
+      - MONGODB_URI=mongodb+srv://lephuonganh:Phuonganh123@cluster0.uikw3ij.mongodb.net/cloud_lab?appName=Cluster0
 
   frontend:
     build: ./client

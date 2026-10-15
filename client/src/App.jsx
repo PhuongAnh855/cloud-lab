@@ -1,7 +1,7 @@
-import { useState, useEffect } from 'react';
+import React, { useState, useEffect } from 'react';
 
-// Khai báo API URL linh hoạt
-const API_URL = import.meta.env.VITE_API_URL || '/api/students';
+// Khai báo đường dẫn API trực tiếp tới Backend trên Render
+const API_URL = 'https://mern-backend-236530.onrender.com/api/students';
 
 function App() {
   const [students, setStudents] = useState([]);
